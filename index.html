@@ -20,12 +20,14 @@
         <textarea name="encodeinput" id="encodeinput" placeholder="Type your message here..."></textarea>
         <button onclick="encode()">Encode</button>
         <button onclick="document.getElementById('encodeoutput').focus(); document.getElementById('encodeoutput').select(); document.execCommand('copy')">Copy</button>
+        <button onclick="document.getElementById('encodeinput').value = ''">Delete</button>
         <textarea name="encodeoutput" id="encodeoutput" placeholder='Press "Encode" to see your message'></textarea>
     </div>
     <div style="display: none;" id="decoding">
         <h2>Decoding</h2>
         <textarea name="decodeinput" id="decodeinput" placeholder="Type the encoded message here..."></textarea>
         <button onclick="decode()">Decode</button>
+        <button onclick="document.getElementById('decodeinput').value = ''">Delete</button>
         <textarea name="decodeoutput" id="decodeoutput" placeholder='Press "Decode" to see your message'></textarea>
     </div>
 </body>
