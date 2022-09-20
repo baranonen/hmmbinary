@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hmmbinary</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>hmmbinary</h1>
+    <button onclick="document.getElementById('encoding').style.display = 'block'; document.getElementById('decoding').style.display = 'none'">Encode</button>
+    <button onclick="document.getElementById('decoding').style.display = 'block'; document.getElementById('encoding').style.display = 'none'">Decode</button>
+    <div id="encoding">
+        <h2>Encoding</h2>
+        <textarea name="encodeinput" id="encodeinput" placeholder="Type your message here..."></textarea>
+        <button onclick="encode()">Encode</button>
+        <button onclick="document.getElementById('encodeoutput').focus(); document.getElementById('encodeoutput').select(); document.execCommand('copy')">Copy</button>
+        <textarea name="encodeoutput" id="encodeoutput" placeholder='Press "Encode" to see your message'></textarea>
+    </div>
+    <div style="display: none;" id="decoding">
+        <h2>Decoding</h2>
+        <textarea name="decodeinput" id="decodeinput" placeholder="Type the encoded message here..."></textarea>
+        <button onclick="decode()">Decode</button>
+        <textarea name="decodeoutput" id="decodeoutput" placeholder='Press "Decode" to see your message'></textarea>
+    </div>
+</body>
+</html>
